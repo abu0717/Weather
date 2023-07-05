@@ -1,5 +1,4 @@
-import requests
-import os
+import requests, os
 
 url = "https://yahoo-weather5.p.rapidapi.com/weather"
 
@@ -67,10 +66,8 @@ if response.status_code == 200:
             high_temp = day["high"]
             low_temp = day["low"]
             description = day["text"]
+            print(f"Ob-havo \n\t{city_name}da, {day_of_week} kunida, Kun: {date}\n\tHarorat:  Yuqori: {high_temp}°C, Past: {low_temp}°C\n\tTavsif: {description}\n")
 
-            print(f"Ob-havo {city_name}da, {day_of_week} kunida, Kun: {date}")
-            print(f"Harorat:  Yuqori: {high_temp}°C, Past: {low_temp}°C")
-            print(f"Tavsif:  {description}")
-            print()
 else:
     print("Serverda Xatolik", response.status_code)
+
