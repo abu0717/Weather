@@ -39,13 +39,11 @@ for i, k in kunlar.items():
 kun = int(input('Kunlardan birini tanlang: '))
 
 if top_weather not in my_dict:
-    print("Invalid city number")
+    print("Notog\'ri Shaxar Raqami")
     exit()
 
 querystring = {
-    "location": my_dict[top_weather],
-    "format": "json",
-    "u": "c"
+    "location": my_dict[top_weather],"format": "json","u": "c"
 }
 
 headers = {
